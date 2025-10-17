@@ -1,5 +1,5 @@
 const { client } = require('./client');
-const { tasks } = require('./user_data');
+const { tasks } = require('./config');
 
 client.on('message_create', message => {
     if (message.body === '!duty') {

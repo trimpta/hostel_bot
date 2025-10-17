@@ -1,8 +1,8 @@
 let task_group_id = 'id@g.us';
 exports.task_group = task_group_id;
 
-let users = ["p1", "p2", "p3", "p4", "p5", "p6", "p6"];
-let nums = ["n1", "n2", "n3", "n3", "n4", "n5", "n6"]; //nx = "xxxxxxxxxx" just the digits of phone no. without +country code or @c.us
+let users = ["p1", "p2", "p3"];
+let nums = ["n1", "n2", "n3"]; //nx = "xxxxxxxxxx" just the digits of phone no. without +country code or @c.us
 
 nums = nums.map((num) => {
     return "91" + num; //my country code for convenience

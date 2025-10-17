@@ -1,24 +1,5 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
-const { tasks } = require('./user_data');
-const { task_group_id } = require('./config');
-
-const client = new Client({
-    authStrategy: new LocalAuth({
-        dataPath: 'whatsapp_js_data'
-    })
-});
-
-
-client.on('ready', () => {
-    console.log('Client is ready!');
-});
-
-client.on('qr', qr => {
-    qrcode.generate(qr, { small: true });
-});
-
-client.initialize();
+const { client } = require('./client');
+const { task_group_id, tasks } = require('./config');
 
 function sendTaskMessage() {
     let day = new Date().getDay();
